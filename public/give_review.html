@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Review</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/my_orders.html" class="btn btn-secondary">← Back to My Orders</a>
+        <div class="card">
+            <h2>Leave a Review</h2>
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="rating">Rating (1-5)</label>
+                    <select id="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">★★★★★ - Excellent</option>
+                        <option value="4">★★★★☆ - Good</option>
+                        <option value="3">★★★☆☆ - Average</option>
+                        <option value="2">★★☆☆☆ - Poor</option>
+                        <option value="1">★☆☆☆☆ - Terrible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" rows="5" placeholder="Share your experience..."></textarea>
+                </div>
+                <input type="hidden" id="orderId">
+                <button type="submit" class="btn">Submit Review</button>
+                <p id="review-status" style="margin-top: 1rem;"></p>
+            </form>
+        </div>
+    </div>
+    <script src="/js/give_review.js"></script>
+</body>
+</html>

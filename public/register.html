@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Vendor App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Register</h1>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">I am a:</label>
+                    <select id="role">
+                        <option value="buyer">Street Vendor (Buyer)</option>
+                        <option value="seller">Supplier (Seller)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="community-group" style="display: none;">
+                    <label for="community">What is your Stall/Business Type?</label>
+                    <select id="community">
+                        <option value="">Loading types...</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p style="margin-top: 1rem;">Already have an account? <a href="/login.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

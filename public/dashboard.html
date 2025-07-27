@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Vendor App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- You need the Leaflet CSS for the map on the seller dashboard -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Header Container -->
+        <div class="header">
+            <!-- 1. This element has the ID the JS is looking for -->
+            <h1 id="dashboard-title">Dashboard</h1>
+            
+            <div class="user-info">
+                <!-- 2. This element has the ID the JS is looking for -->
+                <span id="welcome-message">Welcome!</span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+
+        <!-- 3. This element has the CLASS the JS is looking for -->
+        <div class="tabs">
+            <!-- Tabs will be dynamically filled by JS -->
+        </div>
+
+        <!-- 4. This element has the CLASS the JS is looking for -->
+        <div class="tab-content">
+             <div class="loading-state">Loading Dashboard...</div>
+        </div>
+    </div>
+
+    <!-- External scripts for map functionality -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    
+    <!-- Your main dashboard script -->
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/index.html">← Back to Dashboard</a>
+        <div id="auction-details" class="card">
+            <p>Loading auction details...</p>
+        </div>
+        
+        <div class="card">
+            <h3>Bids (Live)</h3>
+            <ul id="bid-list">
+                <li>No bids yet.</li>
+            </ul>
+        </div>
+        
+        <!-- This section is only for sellers -->
+        <div id="seller-section" class="card hidden">
+            <h3>Place Your Bid</h3>
+            <div class="price-display">
+                <span>Current Lowest Price (per unit):</span>
+                <span id="current-price" class="bid-price">Loading...</span>
+            </div>
+            <button id="decrement-bid-btn" class="btn">Bid ₹10 Lower</button>
+            <p id="bid-error" style="color: red; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <!-- Socket.IO client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/auction-detail.js"></script>
+</body>
+</html>
